@@ -1,0 +1,9 @@
+<html xmlns:th="http://thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{layout}">
+<body>
+    <ul layout:fragment="body">
+        <li th:each="personne, iter :${lPersonnes}"><p th:text='${iter.index+" "+personne.nom+" "+personne.prenom}'>nom prenom</p></li>
+    </ul>
+</body>
+</html>
